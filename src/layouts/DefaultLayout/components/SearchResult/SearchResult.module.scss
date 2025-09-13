@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.headerIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.headerText {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 1.2rem;
+}
+
+// CARD
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 6px;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.cardViewMore {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.54);
+
+  &:hover {
+    color: #f05123;
+  }
+}
+
+.cardBodyItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.cardBodyIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}

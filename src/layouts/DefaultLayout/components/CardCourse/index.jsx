@@ -18,6 +18,7 @@ import imgCourseNode from "/images/course-node-js.png";
 import iconStudent from "/icons/student.svg";
 import iconViews from "/icons/views.svg";
 import iconTime from "/icons/clock.svg";
+import clsx from "clsx";
 
 const courseList = [
   {
@@ -138,7 +139,12 @@ function CardCourse() {
                         {course.students}
                       </span>
                     </div>
-                    <div className={styles.cardMoreInfo}>
+                    <div
+                      className={clsx(
+                        styles.cardMoreInfoViews,
+                        styles.cardMoreInfo
+                      )}
+                    >
                       <img
                         src={iconViews}
                         alt=""

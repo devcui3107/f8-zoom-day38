@@ -1,3 +1,7 @@
+.wrapper {
+  position: relative;
+}
+
 .search {
   display: flex;
   align-items: center;
@@ -8,6 +12,7 @@
   padding: 0 16px 0 12px;
   margin: 0 20px;
   border-radius: 20px;
+  background: #fff;
   border: 2px solid rgb(232, 232, 232);
   transition: border-color 0.2s ease-in-out;
 
@@ -29,6 +34,6 @@
   border: none;
   padding: 0 4px;
   font-size: 1.6rem;
-  background: transparent;
+  background: #fff;
   caret-color: #444;
 }

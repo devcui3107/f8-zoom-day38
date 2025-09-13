@@ -77,7 +77,19 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 6px;
+
+  @include screen("md") {
+    margin-bottom: 18px;
+  }
+}
+
+.cardMoreInfoViews {
+  display: none !important;
+
+  @include screen("md") {
+    display: block;
+  }
 }
 
 .cardPriceText {
