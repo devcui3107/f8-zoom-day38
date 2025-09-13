@@ -1,0 +1,22 @@
+@use "../../styles/mixins" as *;
+
+.container {
+  width: var(--container-width);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mainContent {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  margin-top: 88px;
+  padding: 0 16px;
+  min-height: 600px;
+
+  @include screen("md") {
+    padding: 0 44px 74px;
+  }
+}

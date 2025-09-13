@@ -1,0 +1,21 @@
+.wrapper {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+// Size
+.small {
+  height: 36px;
+  padding: 0 var(--spacing-2);
+}
+
+.medium {
+  height: 44px;
+  padding: 0 var(--spacing-3);
+}
+
+.large {
+  height: 50px;
+  padding: 0 var(--spacing-4);
+}

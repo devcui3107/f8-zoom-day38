@@ -1,0 +1,46 @@
+@use "../../../../styles/mixins" as *;
+
+.footer {
+  overflow: hidden;
+  padding: 20px 30px;
+  color: #a9b3bb;
+  background-color: #181821;
+
+  @include screen("md") {
+    padding: 68px 180px;
+  }
+
+  @include screen("sm") {
+    padding: 40px 80px;
+  }
+}
+
+.footerCopyright {
+  text-align: center;
+  color: #a0a0a0;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.contactList {
+  margin: 20px 0 0;
+  color: #a9b3bb;
+
+  li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
+.footerTitle {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #fff;
+  text-transform: uppercase;
+}

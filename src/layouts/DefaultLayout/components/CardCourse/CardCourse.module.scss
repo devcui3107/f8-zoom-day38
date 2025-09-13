@@ -1,0 +1,101 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #00000008;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px #0000001a;
+  }
+}
+
+.courseTitle {
+  margin: 16px auto 28px 0;
+  color: #242424;
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.cardImgWrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.cardImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px;
+}
+
+.cardTitle {
+  font-weight: 600;
+}
+
+.cardTitleLink {
+  color: #292929;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.cardPrice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.cardPriceText {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.cardMoreInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardMoreInfoIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.cardMoreInfoText {
+  color: #666;
+  font-size: 1.4rem;
+}

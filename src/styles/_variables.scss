@@ -1,0 +1,25 @@
+$containerWidth: 100%;
+
+// Color
+$primary-color: #f05123;
+
+// Spacing
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 20px;
+$spacing-6: 24px;
+
+:root {
+  --container-width: #{$containerWidth};
+
+  --primary-color: #{$primary-color};
+
+  --spacing-1: #{$spacing-1};
+  --spacing-2: #{$spacing-2};
+  --spacing-3: #{$spacing-3};
+  --spacing-4: #{$spacing-4};
+  --spacing-5: #{$spacing-5};
+  --spacing-6: #{$spacing-6};
+}

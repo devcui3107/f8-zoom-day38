@@ -1,0 +1,14 @@
+@use "../../../../styles/mixins" as *;
+
+.coursesBtn {
+  background: transparent;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 8px;
+  color: #333;
+  display: none;
+
+  @include screen("lg") {
+    display: block;
+  }
+}
