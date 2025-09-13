@@ -1,3 +1,5 @@
+@use "../../../../styles/mixins" as *;
+
 .wrapper {
   position: relative;
   display: flex;
@@ -45,7 +47,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 16px 20px;
+  padding: 10px 12px;
+
+  @include screen("md") {
+    padding: 16px 20px;
+  }
 }
 
 .cardTitle {
@@ -54,13 +60,17 @@
 
 .cardTitleLink {
   color: #292929;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   overflow: hidden;
   word-wrap: break-word;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+
+  @include screen("md") {
+    font-size: 1.6rem;
+  }
 }
 
 .cardPrice {
