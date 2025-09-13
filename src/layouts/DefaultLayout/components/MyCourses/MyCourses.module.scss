@@ -1,5 +1,9 @@
 @use "../../../../styles/mixins" as *;
 
+.wrapper {
+  position: relative;
+}
+
 .coursesBtn {
   background: transparent;
   font-size: 1.4rem;
@@ -11,4 +15,110 @@
   @include screen("lg") {
     display: block;
   }
+}
+
+// RESULT
+.result {
+  position: absolute;
+  right: 0;
+  top: 47px;
+}
+
+.resultInner {
+  min-width: 350px;
+  padding-bottom: 12px;
+}
+
+.resultRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 16px;
+}
+
+.resultTitle {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.resultViewMore {
+  font-size: 1.4rem;
+  color: #f05123;
+  padding: 8px 12px;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: #eaeaea;
+  }
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.resultImgWrapper {
+  width: 120px;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ebebeb;
+  text-align: center;
+  line-height: 67px;
+}
+
+.resultImg {
+  width: 100%;
+  object-fit: contain;
+}
+
+.resultInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.resultInfoTitle {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.resultInfoDesc {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+.progress {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 100%;
+  background-color: #dddddd;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background-color: #f05123;
+  transition: width 0.3s ease;
 }

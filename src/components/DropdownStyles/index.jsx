@@ -1,6 +1,6 @@
 import styles from "./DropdownStyles.module.scss";
 
 function DropdownStyles({ children }) {
-  return <div className={styles.wrapper}>{children}</div>;
+  return <div className={styles.dropdown}>{children}</div>;
 }
 export default DropdownStyles;

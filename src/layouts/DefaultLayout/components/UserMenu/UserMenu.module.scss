@@ -1,5 +1,20 @@
 .wrapper {
+  position: relative;
   margin-left: 12px;
+}
+
+.resultRow {
+  display: flex;
+  align-items: center;
+}
+
+.wrapperAvatar {
+  font-size: 1.7rem;
+}
+
+.wrapperAvatarDropdown {
+  font-size: 2.9rem;
+  margin-right: 20px;
 }
 
 .avatar {
@@ -7,9 +22,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px;
-  width: 32px;
-  height: 32px;
+  padding: 0.125em;
+  width: 2em;
+  height: 2em;
   object-fit: contain;
   border-radius: 50%;
   background: linear-gradient(180deg, #ffd900, #b45264 93.68%);
@@ -24,8 +39,50 @@
 
 .avatarSp {
   position: absolute;
-  width: 11px !important;
-  height: 11px !important;
-  top: -2px;
-  right: -7px;
+  width: 0.6875em !important;
+  height: 0.6875em !important;
+  top: -0.125em;
+  right: -0.4375em;
+}
+
+// RESULT
+.result {
+  position: absolute;
+  right: 0;
+  top: 47px;
+  width: 230px;
+}
+
+.fullname {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #292929;
+}
+
+.username {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.4rem;
+  color: #757575;
+}
+
+.linkList {
+  margin-top: 19px;
+}
+
+.linkItem {
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.linkLink {
+  font-size: 1.4rem;
+  color: #666;
+  display: block;
+  padding: 10px 0;
+  cursor: pointer;
+
+  &:hover {
+    color: #333;
+  }
 }

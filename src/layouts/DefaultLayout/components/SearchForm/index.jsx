@@ -1,5 +1,4 @@
 import { useState } from "react";
-import DropdownStyles from "../../../../components/DropdownStyles";
 import SearchResult from "../SearchResult";
 
 import styles from "./SearchForm.module.scss";
@@ -28,11 +27,7 @@ function SearchForm() {
           onBlur={() => handleBlur(setOpen)}
         />
       </div>
-      {open && (
-        <DropdownStyles>
-          <SearchResult />
-        </DropdownStyles>
-      )}
+      {open && <SearchResult />}
     </div>
   );
 }
