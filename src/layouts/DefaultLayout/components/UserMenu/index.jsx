@@ -4,9 +4,18 @@ import UserMenuResult from "./UserMenuResult";
 import styles from "./UserMenu.module.scss";
 import avatarImg from "/images/avatar.png";
 import iconAvatarSp from "/icons/sp-avatar.svg";
+import { useLocation } from "react-router-dom";
 
 function UserMenu() {
   const [open, setOpen] = useState(false);
+
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  // Xử lý việc chọn page ở mobile tự động tắt dropdown
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     function handleClickOutside(e) {
