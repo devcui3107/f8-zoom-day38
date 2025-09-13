@@ -1,0 +1,28 @@
+.wrapper {
+  line-height: 1.6;
+}
+
+.title {
+  color: #242424;
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    font-size: 1.4rem;
+    color: #333;
+    text-align: justify;
+  }
+}

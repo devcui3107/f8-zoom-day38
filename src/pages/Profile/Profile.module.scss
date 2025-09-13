@@ -1,0 +1,131 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profileCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapperAvatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12rem;
+
+  &:hover .changeBtn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125em;
+  width: 2em;
+  height: 2em;
+  object-fit: contain;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffd900, #b45264 93.68%);
+  cursor: pointer;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatarSp {
+  position: absolute;
+  width: 0.6875em !important;
+  height: 0.6875em !important;
+  top: -0.125em;
+  right: -0.4375em;
+}
+
+.changeBtn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    outline: none;
+    transition: border 0.2s;
+
+    &:focus {
+      border-color: var(--primary-color, #f05123);
+    }
+
+    &:disabled {
+      background: #f2f2f2;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.saveBtn {
+  margin-top: 10px;
+  background: var(--primary-color, #f05123);
+  color: #fff;
+  padding: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s;
+
+  &:hover {
+    background: #d84315;
+  }
+}
