@@ -8,12 +8,12 @@ import iconAvatarSp from "/icons/sp-avatar.svg";
 
 const linkList = [
   {
-    linkGroup: [{ url: "#!", label: "Trang cá nhân" }],
+    linkGroup: [{ url: "/profile", label: "Trang cá nhân" }],
   },
   {
     linkGroup: [
-      { url: "#!", label: "Viết blog" },
-      { url: "#!", label: "Bài viết của tôi" },
+      { url: "/modal-demo", label: "Modal Demo" },
+      { url: "/scroll-demo", label: "Scroll Demo" },
       { url: "#!", label: "Bài viết đã lưu" },
     ],
   },
@@ -53,7 +53,7 @@ function UserMenuResult() {
               linkList.map((item) => (
                 <div className={styles.linkItem}>
                   {item.linkGroup.map((itemChild) => (
-                    <Link to="#!" className={styles.linkLink}>
+                    <Link to={itemChild.url} className={styles.linkLink}>
                       {itemChild.label}
                     </Link>
                   ))}
