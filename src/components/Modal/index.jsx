@@ -86,7 +86,11 @@ function Modal({
             } ${isVisible ? styles.visible : styles.hidden}`}
           >
             <button className={styles.modalCloseBtn} onClick={handleClose}>
-              <img src={iconCloseBtn} alt="" />
+              <img
+                src={iconCloseBtn}
+                alt=""
+                className={styles.modalCloseBtnIcon}
+              />
             </button>
             {children || (
               <ModalDefault onClose={handleClose} onConfirm={handleConfirm} />
