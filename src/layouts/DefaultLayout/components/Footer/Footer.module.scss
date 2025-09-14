@@ -11,7 +11,7 @@
   }
 
   @include screen("sm") {
-    padding: 20px 80px;
+    padding: 50px 80px;
   }
 }
 
@@ -20,6 +20,7 @@
   color: #a0a0a0;
   font-weight: 400;
   font-size: 1.4rem;
+  margin-top: 40px;
 }
 
 .contactList {
@@ -43,4 +44,26 @@
   line-height: 1.6;
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 8px;
+
+    a {
+      color: #a9b3bb;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }

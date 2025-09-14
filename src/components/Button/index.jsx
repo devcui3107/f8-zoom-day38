@@ -1,8 +1,21 @@
 import clsx from "clsx";
 import styles from "./Button.module.scss";
 
-function Button({ className, size = "medium", onClick, children }) {
-  const classNames = clsx(styles.wrapper, className, [styles[size]]);
+function Button({
+  className,
+  variants = "default",
+  size = "medium",
+  rounded,
+  onClick,
+  children,
+}) {
+  const classNames = clsx(
+    styles.wrapper,
+    className,
+    rounded && styles.rounded,
+    [styles[size]],
+    [styles[variants]]
+  );
 
   let Component = "button";
   return (

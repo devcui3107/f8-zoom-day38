@@ -5,7 +5,7 @@ import styles from "./ScrollDemo.module.scss";
 function ScrollDemo() {
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>Bài tập Scroll To Top</h1>
+      <h1 className={styles.title}>Exercise Scroll To Top</h1>
       <p className={styles.intro}>
         Trang này có rất nhiều nội dung để bạn cuộn xuống thử nghiệm tính năng
         scroll lên đầu.

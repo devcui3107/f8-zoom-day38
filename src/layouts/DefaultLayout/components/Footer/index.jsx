@@ -1,11 +1,13 @@
 import AppLogo from "../AppLogo";
 import { Row, Col } from "../../../../components/GridSystem";
 import styles from "./Footer.module.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <Row>
+        {/* Cột 1: Liên hệ */}
         <Col span={12} sm={6} lg={3}>
           <AppLogo white />
           <ul className={styles.contactList}>
@@ -21,14 +23,74 @@ function Footer() {
             </li>
           </ul>
         </Col>
+
+        {/* Cột 2: Về F8 */}
         <Col span={12} sm={6} lg={3}>
           <h3 className={styles.footerTitle}>VỀ F8</h3>
+          <ul className={styles.footerList}>
+            <li>
+              <Link to="#!">Giới thiệu</Link>
+            </li>
+            <li>
+              <Link to="#!">Liên hệ</Link>
+            </li>
+            <li>
+              <Link to="#!">Điều khoản</Link>
+            </li>
+            <li>
+              <Link to="#!">Bảo mật</Link>
+            </li>
+          </ul>
         </Col>
+
+        {/* Cột 3: Sản phẩm */}
         <Col span={12} sm={6} lg={3}>
           <h3 className={styles.footerTitle}>SẢN PHẨM</h3>
+          <ul className={styles.footerList}>
+            <li>
+              <Link to="#!">Game Nester</Link>
+            </li>
+            <li>
+              <Link to="#!">Trò chơi CSS Diner</Link>
+            </li>
+            <li>
+              <Link to="#!">Bộ chọn CSS trò chơi</Link>
+            </li>
+            <li>
+              <Link to="#!">Trò chơi Froggy</Link>
+            </li>
+            <li>
+              <Link to="#!">Trò chơi Froggy Pro</Link>
+            </li>
+            <li>
+              <Link to="#!">Tin tức trò chơi</Link>
+            </li>
+          </ul>
         </Col>
+
+        {/* Cột 4: Công cụ */}
         <Col span={12} sm={6} lg={3}>
           <h3 className={styles.footerTitle}>CÔNG CỤ</h3>
+          <ul className={styles.footerList}>
+            <li>
+              <Link to="#!">Tạo CV xin việc</Link>
+            </li>
+            <li>
+              <Link to="#!">Rút gọn liên kết</Link>
+            </li>
+            <li>
+              <Link to="#!">Trình tạo đường dẫn clip</Link>
+            </li>
+            <li>
+              <Link to="#!">Trình tạo đoạn trích</Link>
+            </li>
+            <li>
+              <Link to="#!">Trình tạo lưới CSS</Link>
+            </li>
+            <li>
+              <Link to="#!">Cảnh báo sờ tay lên mặt</Link>
+            </li>
+          </ul>
         </Col>
       </Row>
 
@@ -38,4 +100,5 @@ function Footer() {
     </footer>
   );
 }
+
 export default Footer;

@@ -1,0 +1,20 @@
+.title {
+  margin: 16px auto 28px 0;
+  color: #242424;
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.titleLv2 {
+  font-size: 2rem;
+  margin: 30px 0 20px;
+  font-weight: 500;
+  color: #6c6c6c;
+}
+
+.modalList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}

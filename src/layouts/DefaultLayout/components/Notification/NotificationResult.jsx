@@ -41,7 +41,11 @@ function NotificationResult() {
           <div className={styles.resultList}>
             {resultList &&
               resultList.map((item) => (
-                <Link to="#!" className={styles.resultItem}>
+                <Link
+                  key={item.nameLesson}
+                  to="#!"
+                  className={styles.resultItem}
+                >
                   <img src={logoIcon} alt="" className={styles.resultIcon} />
                   <div className={styles.resultDetail}>
                     <p className={styles.resultContent}>
