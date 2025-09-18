@@ -21,6 +21,10 @@
 
 .footerCol {
   margin: 0 auto;
+
+  @include screen("lg") {
+    margin: 0;
+  }
 }
 
 .footerCopyright {

@@ -57,10 +57,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 10px 12px;
+  padding: 16px 20px;
 
   @include screen("md") {
-    padding: 16px 20px;
+    padding: 10px 10px;
   }
 }
 
@@ -95,10 +95,12 @@
 }
 
 .cardMoreInfoViews {
-  display: none !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 
-  @include screen("md") {
-    display: block;
+  @include screen("lg") {
+    display: none;
   }
 }
 
