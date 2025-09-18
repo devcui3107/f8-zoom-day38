@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import Button from "../../components/Button";
+import Button from "@/components/Button";
 
 import styles from "./GoToTop.module.scss";
 import arrowUp from "/icons/arrow-up.svg";

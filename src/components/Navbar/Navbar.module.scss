@@ -1,11 +1,11 @@
-@use "../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .navbar {
   position: sticky;
   top: 80px;
   left: 0;
   // z-index: 8;
-  display: none;
+  display: flex;
   align-items: center;
   flex-direction: column;
   flex-shrink: 0;
@@ -14,7 +14,7 @@
   padding: 0 8px;
 
   @include screen("md") {
-    display: flex;
+    display: none;
   }
 }
 

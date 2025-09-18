@@ -1,58 +1,30 @@
-/* GridSystem.module.scss */
-@use "sass:math";
+// Breakpoints (PC-first, max-width)
+$breakpoints: (
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px,
+);
 
-$gutter: 16px;
-
-/* ==================== Row ==================== */
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: math.div($gutter, -2);
-  margin-right: math.div($gutter, -2);
+  display: grid;
+  gap: 1rem;
 }
 
-/* ==================== Col ==================== */
-.col {
-  padding-left: math.div($gutter, 2);
-  padding-right: math.div($gutter, 2);
-  margin-bottom: $gutter;
-  flex: 0 0 auto;
-}
-
-/* ==================== Mixins ==================== */
-@function col-width($span) {
-  @return (math.div(100%, 12) * $span);
-}
-
-@mixin generate-cols($prefix) {
-  @for $i from 1 through 12 {
-    .#{$prefix}-#{$i} {
-      flex-basis: col-width($i);
-      max-width: col-width($i);
-    }
+// Desktop mặc định (>= 1200px trở lên)
+@for $i from 1 through 12 {
+  .row-cols-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
   }
 }
 
-/* ==================== Default XS ==================== */
-@include generate-cols("col");
-
-/* ==================== Breakpoints ==================== */
-@media (min-width: 576px) {
-  @include generate-cols("col-sm");
-}
-
-@media (min-width: 768px) {
-  @include generate-cols("col-md");
-}
-
-@media (min-width: 992px) {
-  @include generate-cols("col-lg");
-}
-
-@media (min-width: 1200px) {
-  @include generate-cols("col-xl");
-}
-
-@media (min-width: 1400px) {
-  @include generate-cols("col-xxl");
+// Responsive theo breakpoint
+@each $name, $size in $breakpoints {
+  @media (max-width: #{$size}) {
+    @for $i from 1 through 12 {
+      .row-cols-#{$name}-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
 }

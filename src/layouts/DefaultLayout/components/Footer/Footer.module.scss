@@ -2,7 +2,7 @@
 
 .footer {
   overflow: hidden;
-  padding: 20px 30px;
+  padding: 50px 140px;
   color: #a9b3bb;
   background-color: #181821;
 
@@ -11,8 +11,16 @@
   }
 
   @include screen("sm") {
-    padding: 50px 80px;
+    padding: 20px 30px;
   }
+}
+
+.passRowCols {
+  row-gap: 30px;
+}
+
+.footerCol {
+  margin: 0 auto;
 }
 
 .footerCopyright {

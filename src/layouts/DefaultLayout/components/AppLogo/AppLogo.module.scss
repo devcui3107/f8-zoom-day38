@@ -1,4 +1,4 @@
-@use "../../../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .logo a {
   display: flex;
@@ -18,10 +18,10 @@
   font-weight: 700;
   margin-left: 16px;
   color: #000;
-  display: none;
+  display: block;
 
-  @include screen("lg") {
-    display: block;
+  @include screen("md") {
+    display: none;
   }
 }
 

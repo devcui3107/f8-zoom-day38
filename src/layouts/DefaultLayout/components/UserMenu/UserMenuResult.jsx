@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import DropdownStyles from "../../../../components/DropdownStyles";
+import DropdownStyles from "@/components/DropdownStyles";
 import styles from "./UserMenu.module.scss";
 
 // Image

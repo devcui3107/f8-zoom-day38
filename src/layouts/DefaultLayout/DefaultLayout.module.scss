@@ -1,4 +1,4 @@
-@use "../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .container {
   width: var(--container-width);
@@ -13,11 +13,11 @@
 .content {
   flex: 1;
   margin-top: 88px;
-  padding: 0 16px;
+  padding: 0 44px 74px;
   min-height: 600px;
 
   @include screen("md") {
-    padding: 0 44px 74px;
+    padding: 0 16px 0;
   }
 }
 
@@ -71,12 +71,12 @@
 
 .modalContent {
   padding: 8px 36px;
-  width: 100%;
+  width: 636px;
   height: calc(100vh - 130px);
   overflow: auto;
 
   @include screen("md") {
-    width: 636px;
+    width: 100%;
   }
 
   & h3 {

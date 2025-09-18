@@ -1,4 +1,4 @@
-@use "../../../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .wrapper {
   position: relative;
@@ -13,6 +13,16 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 8px #0000001a;
+  }
+}
+
+.passRowCols {
+  column-gap: 24px;
+  row-gap: 36px;
+
+  @include screen("lg") {
+    column-gap: 12px;
+    row-gap: 20px;
   }
 }
 

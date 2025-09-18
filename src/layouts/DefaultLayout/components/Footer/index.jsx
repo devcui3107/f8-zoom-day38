@@ -1,14 +1,14 @@
-import AppLogo from "../AppLogo";
-import { Row, Col } from "../../../../components/GridSystem";
-import styles from "./Footer.module.scss";
+import { RowCols } from "@/components/GridSystem";
 import { Link } from "react-router-dom";
+import AppLogo from "../AppLogo";
+import styles from "./Footer.module.scss";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Row>
+      <RowCols cols={{ base: 4, lg: 2, md: 1 }} className={styles.passRowCols}>
         {/* Cột 1: Liên hệ */}
-        <Col span={12} sm={6} lg={3}>
+        <div className={styles.footerCol}>
           <AppLogo white />
           <ul className={styles.contactList}>
             <li>
@@ -22,10 +22,10 @@ function Footer() {
               Hà Nội
             </li>
           </ul>
-        </Col>
+        </div>
 
         {/* Cột 2: Về F8 */}
-        <Col span={12} sm={6} lg={3}>
+        <div className={styles.footerCol}>
           <h3 className={styles.footerTitle}>VỀ F8</h3>
           <ul className={styles.footerList}>
             <li>
@@ -41,10 +41,10 @@ function Footer() {
               <Link to="#!">Bảo mật</Link>
             </li>
           </ul>
-        </Col>
+        </div>
 
         {/* Cột 3: Sản phẩm */}
-        <Col span={12} sm={6} lg={3}>
+        <div className={styles.footerCol}>
           <h3 className={styles.footerTitle}>SẢN PHẨM</h3>
           <ul className={styles.footerList}>
             <li>
@@ -66,10 +66,10 @@ function Footer() {
               <Link to="#!">Tin tức trò chơi</Link>
             </li>
           </ul>
-        </Col>
+        </div>
 
         {/* Cột 4: Công cụ */}
-        <Col span={12} sm={6} lg={3}>
+        <div className={styles.footerCol}>
           <h3 className={styles.footerTitle}>CÔNG CỤ</h3>
           <ul className={styles.footerList}>
             <li>
@@ -91,8 +91,8 @@ function Footer() {
               <Link to="#!">Cảnh báo sờ tay lên mặt</Link>
             </li>
           </ul>
-        </Col>
-      </Row>
+        </div>
+      </RowCols>
 
       <p className={styles.footerCopyright}>
         © 2018 - 2025 F8. Nền tảng học lập trình hàng đầu Việt Nam

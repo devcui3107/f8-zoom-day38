@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Row, Col } from "../../../../components/GridSystem";
+import { RowCols } from "@/components/GridSystem";
 import styles from "./CardCourse.module.scss";
 
 //Images
@@ -107,69 +107,63 @@ function CardCourse() {
   return (
     <>
       <h2 className={styles.courseTitle}>Khoá học miễn phí</h2>
-      <Row>
+      <RowCols cols={{ base: 4, xl: 3, md: 2 }} className={styles.passRowCols}>
         {courseList &&
           courseList.map((course) => (
-            <Col span={6} md={4} xl={3} key={course.title}>
-              <div className={styles.wrapper}>
-                <Link to={course.to} className={styles.cardImgWrap}>
-                  <img
-                    src={course.thumbnail}
-                    alt=""
-                    className={styles.cardImg}
-                  />
-                </Link>
-                <div className={styles.cardInfo}>
-                  <h3 className={styles.cardTitle}>
-                    <Link to={course.to} className={styles.cardTitleLink}>
-                      {course.title}
-                    </Link>
-                  </h3>
-                  <div className={styles.cardPrice}>
-                    <span className={styles.cardPriceText}>{course.price}</span>
+            <div key={course.title} className={styles.wrapper}>
+              <Link to={course.to} className={styles.cardImgWrap}>
+                <img src={course.thumbnail} alt="" className={styles.cardImg} />
+              </Link>
+              <div className={styles.cardInfo}>
+                <h3 className={styles.cardTitle}>
+                  <Link to={course.to} className={styles.cardTitleLink}>
+                    {course.title}
+                  </Link>
+                </h3>
+                <div className={styles.cardPrice}>
+                  <span className={styles.cardPriceText}>{course.price}</span>
+                </div>
+                <div className={styles.cardRow}>
+                  <div className={styles.cardMoreInfo}>
+                    <img
+                      src={iconStudent}
+                      alt=""
+                      className={styles.cardMoreInfoIcon}
+                    />
+                    <span className={styles.cardMoreInfoText}>
+                      {course.students}
+                    </span>
                   </div>
-                  <div className={styles.cardRow}>
-                    <div className={styles.cardMoreInfo}>
-                      <img
-                        src={iconStudent}
-                        alt=""
-                        className={styles.cardMoreInfoIcon}
-                      />
-                      <span className={styles.cardMoreInfoText}>
-                        {course.students}
-                      </span>
-                    </div>
-                    <div
-                      className={clsx(
-                        styles.cardMoreInfoViews,
-                        styles.cardMoreInfo
-                      )}
-                    >
-                      <img
-                        src={iconViews}
-                        alt=""
-                        className={styles.cardMoreInfoIcon}
-                      />
-                      <span className={styles.cardMoreInfoText}>
-                        {course.views}
-                      </span>
-                    </div>
-                    <div className={styles.cardMoreInfo}>
-                      <img
-                        src={iconTime}
-                        alt=""
-                        className={styles.cardMoreInfoIcon}
-                      />
-                      <span className={styles.cardMoreInfoText}>
-                        {course.time}
-                      </span>
-                    </div>
+                  <div
+                    className={clsx(
+                      styles.cardMoreInfoViews,
+                      styles.cardMoreInfo
+                    )}
+                  >
+                    <img
+                      src={iconViews}
+                      alt=""
+                      className={styles.cardMoreInfoIcon}
+                    />
+                    <span className={styles.cardMoreInfoText}>
+                      {course.views}
+                    </span>
+                  </div>
+                  <div className={styles.cardMoreInfo}>
+                    <img
+                      src={iconTime}
+                      alt=""
+                      className={styles.cardMoreInfoIcon}
+                    />
+                    <span className={styles.cardMoreInfoText}>
+                      {course.time}
+                    </span>
                   </div>
                 </div>
               </div>
-            </Col>
+            </div>
           ))}
-      </Row>
+      </RowCols>
     </>
   );
 }

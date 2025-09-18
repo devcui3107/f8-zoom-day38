@@ -1,4 +1,4 @@
-@use "../../../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .wrapper {
   position: relative;
@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
+  width: 420px;
   height: 40px;
   padding: 0 16px 0 12px;
   margin: 0 20px;
@@ -18,7 +18,8 @@
   transition: border-color 0.2s ease-in-out;
 
   @include screen("md") {
-    width: 420px;
+    max-width: 100%;
+    width: auto;
   }
 
   &:focus-within {

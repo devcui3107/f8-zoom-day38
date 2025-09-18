@@ -1,23 +1,24 @@
 import clsx from "clsx";
 import styles from "./GridSystem.module.scss";
 
-/* Row */
-export function Row({ children, className }) {
-  return <div className={clsx(styles.row, className)}>{children}</div>;
-}
+export function RowCols({ children, cols = {}, className }) {
+  // #1. Chuyển object thành mảng chứa các mảng cặp key:value
+  const entries = Object.entries(cols);
 
-/* Col */
-export function Col({ children, span = 12, sm, md, lg, xl, xxl, className }) {
-  const colClass = clsx(
-    styles.col,
-    span && styles[`col-${span}`],
-    sm && styles[`col-sm-${sm}`],
-    md && styles[`col-md-${md}`],
-    lg && styles[`col-lg-${lg}`],
-    xl && styles[`col-xl-${xl}`],
-    xxl && styles[`col-xxl-${xxl}`],
-    className
+  // #2. Duyệt qua mảng để lấy ra các key:value
+  const colClasses = entries.map(([breakpoint, value]) => {
+    // Tạo tên class có breakpoint
+    const classWithBreakpoint = styles[`row-cols-${breakpoint}-${value}`];
+
+    // Tạo tên class không có breakpoint
+    const classWithoutBreakpoint = styles[`row-cols-${value}`];
+
+    // Nếu có breakpoint (md, lg, xl...) thì lấy theo nó
+    // Nếu là base thì dùng classWithoutBreakpoint
+    return classWithBreakpoint || classWithoutBreakpoint;
+  });
+
+  return (
+    <div className={clsx(styles.row, colClasses, className)}>{children}</div>
   );
-
-  return <div className={colClass}>{children}</div>;
 }

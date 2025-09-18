@@ -1,5 +1,5 @@
 import SearchResultDetail from "./SearchResultDetail";
-import DropdownStyles from "../../../../components/DropdownStyles";
+import DropdownStyles from "@/components/DropdownStyles";
 
 import styles from "./SearchResult.module.scss";
 import iconSearch from "/icons/search.svg";

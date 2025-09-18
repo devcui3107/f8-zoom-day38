@@ -1,5 +1,5 @@
 import MyCourseResult from "./MyCoursesResult";
-import Button from "../../../../components/Button";
+import Button from "@/components/Button";
 
 import styles from "./MyCourses.module.scss";
 import { useEffect, useState } from "react";

@@ -1,4 +1,4 @@
-@use "../../../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .wrapper {
   position: relative;
@@ -10,10 +10,10 @@
   font-weight: 600;
   padding: 8px;
   color: #333;
-  display: none;
+  display: block;
 
   @include screen("lg") {
-    display: block;
+    display: none;
   }
 }
 
